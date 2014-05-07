@@ -10,7 +10,6 @@ from ConfigParser import RawConfigParser
 def genconfig(filename):
 	"""读取文件，取得数据内容，生成词典
 	"""
-
 	with open(filename, "r") as f:
 		read_rb = f.read()
 
@@ -19,7 +18,7 @@ def genconfig(filename):
 	homepage = lines[2].lstrip()[len("homepage '"):-1]
 	version = lines[3].lstrip()[len("version '"):-1]
 	link = lines[5].lstrip()[len("link '"):-1]
-
+	## 每个文件内容，生成一个字典内容
 	d = {
 		"url": url,
 		"homepage": homepage,
