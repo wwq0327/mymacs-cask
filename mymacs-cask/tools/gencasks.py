@@ -24,7 +24,7 @@ def genconfig(filename):
 		"homepage": homepage,
 		"version": version,
 		"link": link}
-	
+
 	return d
 
 def write_config(d, filename):
@@ -37,7 +37,7 @@ def write_config(d, filename):
 
 	with open(filename, "wb") as configfile:
 		config.write(configfile)
-		
+
 def listfiles(path):
 	"""获取目录中的所有文件
 	"""
@@ -58,6 +58,6 @@ def gen_configs(path):
 		filename = get_file_name(file)
 		print "写入文件：", filename
 		write_config(d, os.path.join("../casks", filename))
-	
+
 if __name__ == "__main__":
 	gen_configs("../../homebrew-casks/")
