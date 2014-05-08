@@ -13,6 +13,7 @@ def extract_zip(zfile, path):
 	z = zipfile.ZipFile(zfile)
 	z.extractall(path)
 	print "文件解压到:%s" % path
+	z.close()
 	
 def test():
 	extract_zip("../testdatas/test.zip", "/tmp")
